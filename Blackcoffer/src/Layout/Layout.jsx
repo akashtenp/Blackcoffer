@@ -4,12 +4,13 @@ import React from 'react'
 
 const Layout = () => {
   return (
-    <>
-      <Navbar />
-      <div className="p-8 bg-gray-100 min-h-screen overflow-hidden">
+    <div className="flex flex-col h-screen w-screen">
+      {/* <Navbar /> */}
+      <div className="flex flex-1 overflow-hidden">
+        {/* Main Outlet where Index.jsx will render */}
         <Outlet />
       </div>
-    </>
+    </div>
   )
 }
 
