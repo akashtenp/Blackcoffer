@@ -6,6 +6,7 @@ import "leaflet/dist/leaflet.css";
 import City from "./City";
 import Topics from "./Topics";
 import Region from "./Region";
+import WorldMap from "./WorldMap";
 
 const filterFields = [
   "End Year",
@@ -82,10 +83,9 @@ const Index = () => {
 
           <div className="bg-white rounded-xl p-4 shadow flex flex-col">
             <h3 className="font-semibold mb-2">Country</h3>
-            <div className="flex-1 flex items-center justify-center">
-              <CountryMap />
-            </div>
+            <WorldMap />
           </div>
+
 
           <div className="bg-white rounded-xl p-4 shadow flex flex-col">
             <Topics />
