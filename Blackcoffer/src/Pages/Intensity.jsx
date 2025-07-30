@@ -16,12 +16,12 @@ import {
 } from "recharts"
 
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { month: "January", Intensity: 186, Likelihood: 80, Relevance: 60 },
+  { month: "February", Intensity: 305, Likelihood: 200, Relevance: 95 },
+  { month: "March", Intensity: 237, Likelihood: 120, Relevance: 110 },
+  { month: "April", Intensity: 73, Likelihood: 190, Relevance: 65 },
+  { month: "May", Intensity: 209, Likelihood: 130, Relevance: 150 },
+  { month: "June", Intensity: 214, Likelihood: 140, Relevance: 135 },
 ]
 
 const Intensity = () => {
@@ -33,9 +33,7 @@ const Intensity = () => {
       </CardHeader>
       <CardContent className="h-[100px]">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            data={chartData}
-          >
+          <LineChart data={chartData}>
             <CartesianGrid vertical={false} strokeDasharray="5 5" />
             <XAxis
               dataKey="month"
@@ -47,15 +45,22 @@ const Intensity = () => {
             <Tooltip />
             <Line
               type="monotone"
-              dataKey="desktop"
+              dataKey="Intensity"
               stroke="#3b82f6"
               strokeWidth={1}
               dot={false}
             />
             <Line
               type="monotone"
-              dataKey="mobile"
+              dataKey="Likelihood"
               stroke="#10b981"
+              strokeWidth={1}
+              dot={false}
+            />
+            <Line
+              type="monotone"
+              dataKey="Relevance"
+              stroke="#f59e0b" // amber-500
               strokeWidth={1}
               dot={false}
             />
