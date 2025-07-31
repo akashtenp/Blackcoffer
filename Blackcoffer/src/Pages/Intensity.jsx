@@ -1,10 +1,7 @@
-import { TrendingUp } from "lucide-react"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 import {
   LineChart,
@@ -28,10 +25,10 @@ const Intensity = () => {
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle>Line Chart - Multiple</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        {/* <CardTitle>Line Chart - Multiple</CardTitle> */}
+        {/* <CardDescription>January - June 2024</CardDescription> */}
       </CardHeader>
-      <CardContent className="h-[100px]">
+      <CardContent className="h-[150px]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={chartData}>
             <CartesianGrid vertical={false} strokeDasharray="5 5" />
